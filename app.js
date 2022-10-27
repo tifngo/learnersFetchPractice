@@ -15,11 +15,10 @@ function makeCall() {
         return response.json();
       }
     }) // convert the returned data into a json using the object's built-in methods. Type of argument it's expecting is a callback function. .then will be called when there is a successful resolved.
-    .then(robert => {
-      const myData = robert.data[2];
+    .then(person => {
+      const myData = person.data[2].avatar;
       console.log(myData);
     }) // use the resulting json to display some of our user information in the console.
     .catch(console.log); // console.log an error message in case something goes wrong.
-
 };
 
